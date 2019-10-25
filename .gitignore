@@ -1,5 +1,5 @@
-*.tfstate.backup
-*.tfstate
+terraform.tfstate
+terraform.tfstate.backup
 *.pem
 *.ppk
 .terraform/
