@@ -1,0 +1,6 @@
+*.tfstate
+*.tfstate.backup
+*.pem
+*.ppk
+.terraform/
+.idea/
