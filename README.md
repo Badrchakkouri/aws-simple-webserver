@@ -2,7 +2,7 @@
 
 In this example I will use Terraform to setup an infrastructure in AWS to host a custom web page. I will do this with two different AWS services: EC2 and Lightsail
 
-## Terraform infrastructure as code
+## Terraform IaC for AWS
 4 terraform files in the game:
 
 `provider.tf` specifies the connection information needed to connect to my AWS account. Comments are available in the code for this part, yet more about how to use AWS provider is available in official terraform doc.
@@ -24,7 +24,7 @@ In this example I will be using 2 scripts:
 
 The Terraform parameter to use to run a startup script in AWS is `user_data =` it takes the script file as a value and it goes within the EC2 instance resource declaration.
 
-## Build the infrastructure with Terraform
+## Building the infrastructure with Terraform
 
 First thing to do is to initialize the working directory where terraform code is located with the command terraform init, this will enable terraform to prepare the directory as a terraform workspace and get the necessary plugins to talk with the cloud provider, AWS plugin in this example.
 
@@ -34,7 +34,7 @@ One optional step to do before running the code is terraform plane, this gives a
 
 Last step is to go ahead and run terraform apply and issue a yes when prompted and Voila! Terraform will do its magic and outputs the URLs for EC2 and Lighsail.
 
-## Test the results
+## Accessing the web pages
 
 On EC2:
 ![screenshot](web-page-ec2.PNG)
